@@ -1,0 +1,22 @@
+Command: ninja all
+[1/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/blink_example_main.c.obj
+E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/main/blink_example_main.c: In function 'app_main':
+E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/main/blink_example_main.c:183:13: warning: variable 'state' set but not used [-Wunused-but-set-variable]
+  183 |         int state = 0; // 0: soft-start, 1: MPPT, 2: bảo vệ
+      |             ^~~~~
+[2/9] Linking C static library esp-idf\main\libmain.a
+[3/9] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\MPPT_DONE\build\bootloader\esp-idf\esptool_py && E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[4/9] No install step for 'bootloader'
+[5/9] Completed 'bootloader'
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+[7/9] Linking CXX executable Test_MPPT.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.9.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/build/Test_MPPT.bin
+[9/9] C:\WINDOWS\system32\cmd.exe /C "cd /D E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\MPPT_DONE\build\esp-idf\esptool_py && E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/build/partition_table/partition-table.bin E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/build/Test_MPPT.bin"
+Test_MPPT.bin binary size 0x2e2d0 bytes. Smallest app partition is 0x100000 bytes. 0xd1d30 bytes (82%) free.

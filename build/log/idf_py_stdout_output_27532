@@ -1,0 +1,265 @@
+Command: E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\MPPT_DONE\build\Test_MPPT.elf E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\MPPT_DONE\build\bootloader\bootloader.elf --force-color -m 'E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'COM7'
+revision: v3.0
+[0;32mI (34) boot.eets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Dec 20 2025 11:40:10[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=098e4h ( 39140) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001990c vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (102) esp_image: segment 2: paddr=00019934 vaddr=3ffb0000 size=022a0h (  8864) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=0001bbdc vaddr=40080000 size=0443ch ( 17468) load[0m
+[0;32mI (120) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=13dc4h ( 81348) map[0m
+[0;32mI (149) esp_image: segment 5: paddr=00033dec vaddr=4008443c size=0a058h ( 41048) load[0m
+[0;32mI (172) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (172) boot: Disabling RNG early entropy source...[0m
+[0;32mI (182) cpu_start: Multicore app[0m
+[0;32mI (191) cpu_start: Pro cpu start user code[0m
+[0;32mI (191) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (191) app_init: Application information:[0m
+[0;32mI (191) app_init: Project name:     Test_MPPT[0m
+[0;32mI (195) app_init: App version:      v5.5-dirty[0m
+[0;32mI (199) app_init: Compile time:     Dec 20 2025 11:39:59[0m
+[0;32mI (204) app_init: ELF file SHA256:  8a7204161...[0m
+[0;32mI (208) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (212) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (216) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (220) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (224) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (231) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFB2B80 len 0002D480 (181 KiB): DRAM[0m
+[0;32mI (241) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 4008E494 len 00011B6C (70 KiB): IRAM[0m
+[0;33mW (258) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (267) spi_flash: detected chip: generic[0m
+[0;32mI (271) spi_flash: flash io: dio[0m
+[0;33mW (274) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (284) main_task: Started on CPU0[0m
+[0;32mI (294) main_task: Calling app_main()[0m
+[0;32mI (294) MPPT: V=7.37V I=-0.000A Duty=0.49[0m
+[0;32mI (1294) MPPT: V=6.97V I=0.073A Duty=0.48[0m
+[0;32mI (2294) MPPT: V=6.99V I=0.073A Duty=0.49[0m
+[0;32mI (3294) MPPT: V=6.97V I=0.072A Duty=0.50[0m
+[0;32mI (4294) MPPT: V=6.96V I=0.074A Duty=0.49[0m
+[0;32mI (5294) MPPT: V=6.97V I=0.073A Duty=0.48[0m
+[0;32mI (6294) MPPT: V=6.98V I=0.070A Duty=0.47[0m
+[0;32mI (7294) MPPT: V=6.99V I=0.071A Duty=0.48[0m
+[0;32mI (8294) MPPT: V=6.98V I=0.069A Duty=0.49[0m
+[0;32mI (9294) MPPT: V=6.96V I=0.072A Duty=0.48[0m
+[0;32mI (10294) MPPT: V=6.97V I=0.072A Duty=0.49[0m
+[0;32mI (11294) MPPT: V=6.97V I=0.075A Duty=0.48[0m
+[0;32mI (12294) MPPT: V=6.98V I=0.073A Duty=0.47[0m
+[0;32mI (13294) MPPT: V=6.99V I=0.069A Duty=0.46[0m
+[0;32mI (14294) MPPT: V=7.00V I=0.070A Duty=0.47[0m
+[0;32mI (15294) MPPT: V=6.98V I=0.069A Duty=0.48[0m
+[0;32mI (16294) MPPT: V=6.98V I=0.071A Duty=0.47[0m
+[0;32mI (17294) MPPT: V=6.68V I=0.116A Duty=0.46[0m
+[0;32mI (18294) MPPT: V=6.77V I=0.111A Duty=0.45[0m
+[0;32mI (19294) MPPT: V=6.92V I=0.109A Duty=0.46[0m
+[0;32mI (20294) MPPT: V=6.91V I=0.112A Duty=0.45[0m
+[0;32mI (21294) MPPT: V=6.95V I=0.110A Duty=0.44[0m
+[0;32mI (22294) MPPT: V=6.81V I=0.106A Duty=0.45[0m
+[0;32mI (23294) MPPT: V=6.83V I=0.113A Duty=0.46[0m
+ revision: v3.0
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=098e4h ( 39140) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001990c vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (102) esp_image: segment 2: paddr=00019934 vaddr=3ffb0000 size=022a0h (  8864) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=0001bbdc vaddr=40080000 size=0443ch ( 17468) load[0m
+[0;32mI (120) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=13dc4h ( 81348) map[0m
+[0;32mI (149) esp_image: segment 5: paddr=00033dec vaddr=4008443c size=0a058h ( 41048) load[0m
+[0;32mI (172) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (172) boot: Disabling RNG early entropy source...[0m
+[0;32mI (182) cpu_start: Multicore app[0m
+[0;32mI (191) cpu_start: Pro cpu start user code[0m
+[0;32mI (191) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (191) app_init: Application information:[0m
+[0;32mI (191) app_init: Project name:     Test_MPPT[0m
+[0;32mI (195) app_init: App version:      v5.5-dirty[0m
+[0;32mI (199) app_init: Compile time:     Dec 20 2025 11:39:59[0m
+[0;32mI (204) app_init: ELF file SHA256:  8a7204161...[0m
+[0;32mI (208) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (212) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (216) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (220) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (224) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (231) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFB2B80 len 0002D480 (181 KiB): DRAM[0m
+[0;32mI (241) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 4008E494 len 00011B6C (70 KiB): IRAM[0m
+[0;33mW (258) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (267) spi_flash: detected chip: generic[0m
+[0;32mI (271) spi_flash: flash io: dio[0m
+[0;33mW (274) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (284) main_task: Started on CPU0[0m
+[0;32mI (294) main_task: Calling app_main()[0m
+[0;32mI (294) MPPT: V=2.12V I=-0.000A Duty=0.49[0m
+[0;32mI (1294) MPPT: V=0.21V I=-0.000A Duty=0.48[0m
+[0;32mI (2294) MPPT: V=0.18V I=-0.001A Duty=0.49[0m
+[0;32mI (3294) MPPT: V=0.20V I=-0.000A Duty=0.50[0m
+[0;32mI (4294) MPPT: V=0.14V I=-0.000A Duty=0.49[0m
+[0;32mI (5294) MPPT: V=0.08V I=-0.000A Duty=0.50[0m
+[0;32mI (6294) MPPT: V=0.06V I=-0.000A Duty=0.49[0m
+[0;32mI (7294) MPPT: V=0.07V I=-0.001A Duty=0.48[0m
+[0;32mI (8294) MPPT: V=0.06V I=0.000A Duty=0.47[0m
+[0;32mI (9294) MPPT: V=0.04V I=-0.001A Duty=0.48[0m
+[0;32mI (10294) MPPT: V=0.00V I=-0.001A Duty=0.47[0m
+[0;32mI (11294) MPPT: V=0.03V I=-0.000A Duty=0.46[0m
+[0;32mI (12294) MPPT: V=0.06V I=-0.000A Duty=0.45[0m
+[0;32mI (13294) MPPT: V=0.02V I=0.000A Duty=0.44[0m
+[0;32mI (14294) MPPT: V=0.02V I=-0.000A Duty=0.45[0m
+[0;32mI (15294) MPPT: V=0.00V I=-0.001A Duty=0.44[0m
+[0;32mI (16294) MPPT: V=0.00V I=-0.001A Duty=0.43[0m
+[0;32mI (17294) MPPT: V=0.08V I=-0.000A Duty=0.42[0m
+[0;32mI (18294) MPPT: V=0.02V I=-0.001A Duty=0.43[0m
+[0;32mI (19294) MPPT: V=0.00V I=-0.001A Duty=0.42[0m
+[0;32mI (20294) MPPT: V=0.00V I=-0.000A Duty=0.43[0m
+[0;32mI (21294) MPPT: V=0.00V I=-0.001A Duty=0.44[0m
+[0;32mI (22294) MPPT: V=0.00V I=-0.000A Duty=0.45[0m
+[0;32mI (23294) MPPT: V=0.00V I=-0.000A Duty=0.46[0m
+[0;32mI (24294) MPPT: V=0.00V I=-0.001A Duty=0.47[0m
+[0;32mI (25294) MPPT: V=0.00V I=-0.001A Duty=0.48[0m
+[0;32mI (26294) MPPT: V=0.00V I=-0.000A Duty=0.49[0m
+[0;32mI (27294) MPPT: V=0.00V I=-0.001A Duty=0.50[0m
+[0;32mI (28294) MPPT: V=0.00V I=-0.000A Duty=0.51[0m
+[0;32mI (29294) MPPT: V=0.00V I=-0.000A Duty=0.52[0m
+[0;32mI (30294) MPPT: V=0.00V I=-0.001A Duty=0.53[0m
+[0;32mI (31294) MPPT: V=0.00V I=-0.000A Duty=0.54[0m
+[0;32mI (32294) MPPT: V=0.00V I=-0.001A Duty=0.55[0m
+[0;32mI (33294) MPPT: V=0.00V I=-0.000A Duty=0.56[0m
+[0;32mI (34294) MPPT: V=0.00V I=-0.001A Duty=0.57[0m
+[0;32mI (35294) MPPT: V=0.00V I=-0.000A Duty=0.58[0m
+[0;32mI (36294) MPPT: V=0.00V I=-0.001A Duty=0.59[0m
+[0;32mI (37294) MPPT: V=0.00V I=-0.000A Duty=0.60[0m
+[0;32mI (38294) MPPT: V=0.00V I=-0.000A Duty=0.61[0m
+[0;32mI (39294) MPPT: V=0.38V I=0.000A Duty=0.62[0m
+[0;32mI (40294) MPPT: V=0.26V I=-0.000A Duty=0.63[0m
+[0;32mI (41294) MPPT: V=0.19V I=-0.001A Duty=0.64[0m
+[0;32mI (42294) MPPT: V=0.16V I=-0.000A Duty=0.63[0m
+[0;32mI (43294) MPPT: V=0.00V I=0.115A Duty=0.62[0m
+[0;32mI (44294) MPPT: V=0.00V I=0.144A Duty=0.63[0m
+[0;32mI (45294) MPPT: V=0.00V I=0.123A Duty=0.64[0m
+[0;32mI (46294) MPPT: V=0.00V I=0.130A Duty=0.65[0m
+[0;32mI (47294) MPPT: V=0.00V I=0.131A Duty=0.66[0m
+[0;32mI (48294) MPPT: V=0.00V I=0.143A Duty=0.67[0m
+[0;32mI (49294) MPPT: V=0.00V I=0.124A Duty=0.68[0m
+[0;32mI (50294) MPPT: V=0.00V I=0.143A Duty=0.69[0m
+[0;32mI (51294) MPPT: V=0.00V I=0.138A Duty=0.70[0m
+[0;32mI (52294) MPPT: V=0.00V I=0.132A Duty=0.71[0m
+[0;32mI (53294) MPPT: V=0.00V I=0.135A Duty=0.72[0m
+[0;32mI (54294) MPPT: V=0.00V I=0.115A Duty=0.73[0m
+[0;32mI (55294) MPPT: V=0.00V I=0.113A Duty=0.74[0m
+[0;32mI (56294) MPPT: V=0.00V I=0.109A Duty=0.75[0m
+[0;32mI (57294) MPPT: V=0.00V I=0.109A Duty=0.76[0m
+[0;32mI (58294) MPPT: V=0.00V I=0.117A Duty=0.77[0m
+[0;32mI (59294) MPPT: V=0.00V I=0.108A Duty=0.78[0m
+[0;32mI (60294) MPPT: V=0.00V I=0.091A Duty=0.79[0m
+[0;32mI (61294) MPPT: V=0.00V I=0.089A Duty=0.80[0m
+[0;32mI (62294) MPPT: V=0.00V I=0.090A Duty=0.81[0m
+[0;32mI (63294) MPPT: V=0.00V I=0.094A Duty=0.82[0m
+[0;32mI (64294) MPPT: V=0.00V I=0.090A Duty=0.83[0m
+[0;32mI (65294) MPPT: V=0.00V I=0.085A Duty=0.84[0m
+[0;32mI (66294) MPPT: V=0.00V I=0.091A Duty=0.85[0m
+[0;32mI (67294) MPPT: V=6.10V I=0.131A Duty=0.86[0m
+�K��.0
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=098e4h ( 39140) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001990c vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (102) esp_image: segment 2: paddr=00019934 vaddr=3ffb0000 size=022a0h (  8864) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=0001bbdc vaddr=40080000 size=0443ch ( 17468) load[0m
+[0;32mI (120) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=13dc4h ( 81348) map[0m
+[0;32mI (149) esp_image: segment 5: paddr=00033dec vaddr=4008443c size=0a058h ( 41048) load[0m
+[0;32mI (172) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (172) boot: Disabling RNG early entropy source...[0m
+[0;32mI (182) cpu_start: Multicore app[0m
+[0;32mI (191) cpu_start: Pro cpu start user code[0m
+[0;32mI (191) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (191) app_init: Application information:[0m
+[0;32mI (191) app_init: Project name:     Test_MPPT[0m
+[0;32mI (195) app_init: App version:      v5.5-dirty[0m
+[0;32mI (199) app_init: Compile time:     Dec 20 2025 11:39:59[0m
+[0;32mI (204) app_init: ELF file SHA256:  8a7204161...[0m
+[0;32mI (208) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (212) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (216) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (220) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (224) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (231) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFB2B80 len 0002D480 (181 KiB): DRAM[0m
+[0;32mI (241) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 4008E494 len 00011B6C (70 KiB): IRAM[0m
+[0;33mW (258) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (267) spi_flash: detected chip: generic[0m
+[0;32mI (271) spi_flash: flash io: dio[0m
+[0;33mW (274) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (284) main_task: Started on CPU0[0m
+[0;32mI (294) main_task: Calling app_main()[0m
+[0;32mI (294) MPPT: V=7.32V I=0.000A Duty=0.51[0m
+[0;32mI (1294) MPPT: V=6.92V I=0.061A Duty=0.50[0m
+[0;32mI (2294) MPPT: V=6.93V I=0.061A Duty=0.49[0m
+[0;32mI (3294) MPPT: V=6.94V I=0.062A Duty=0.50[0m
+[0;32mI (4294) MPPT: V=6.93V I=0.064A Duty=0.49[0m
+[0;32mI (5294) MPPT: V=6.94V I=0.060A Duty=0.48[0m
+[0;32mI (6294) MPPT: V=6.94V I=0.059A Duty=0.47[0m
+[0;32mI (7294) MPPT: V=6.96V I=0.056A Duty=0.46[0m
+[0;32mI (8294) MPPT: V=6.97V I=0.057A Duty=0.47[0m
+[0;32mI (9294) MPPT: V=6.96V I=0.058A Duty=0.46[0m
+[0;32mI (10294) MPPT: V=6.96V I=0.060A Duty=0.45[0m
+[0;32mI (11294) MPPT: V=6.97V I=0.056A Duty=0.44[0m
+[0;32mI (12294) MPPT: V=6.98V I=0.055A Duty=0.43[0m
+[0;32mI (13294) MPPT: V=6.99V I=0.056A Duty=0.44[0m
+[0;32mI (14294) MPPT: V=6.98V I=0.057A Duty=0.43[0m
+[0;32mI (15294) MPPT: V=7.00V I=0.055A Duty=0.42[0m
+[0;32mI (16294) MPPT: V=7.00V I=0.052A Duty=0.43[0m
+[0;32mI (17294) MPPT: V=6.98V I=0.053A Duty=0.42[0m
+[0;32mI (18294) MPPT: V=7.00V I=0.053A Duty=0.43[0m
+[0;32mI (19294) MPPT: V=6.99V I=0.056A Duty=0.42[0m
+[0;32mI (20294) MPPT: V=6.99V I=0.055A Duty=0.41[0m
+[0;32mI (21294) MPPT: V=7.00V I=0.052A Duty=0.40[0m
+[0;32mI (22294) MPPT: V=7.01V I=0.051A Duty=0.39[0m
+[0;32mI (23294) MPPT: V=7.02V I=0.051A Duty=0.40[0m
+[0;32mI (24294) MPPT: V=7.01V I=0.053A Duty=0.39[0m
+[0;32mI (25294) MPPT: V=7.02V I=0.050A Duty=0.38[0m
+[0;32mI (26294) MPPT: V=7.02V I=0.050A Duty=0.39[0m
+[0;32mI (27294) MPPT: V=7.02V I=0.052A Duty=0.38[0m

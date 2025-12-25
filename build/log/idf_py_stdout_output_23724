@@ -1,0 +1,492 @@
+Command: E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\MPPT_DONE\build\Test_MPPT.elf E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\MPPT_DONE\build\bootloader\bootloader.elf --force-color -m 'E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'COM7'
+�revision: v3.0
+[0;32mI (34) boot.�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Dec 20 2025 11:40:10[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=098f4h ( 39156) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001991c vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (102) esp_image: segment 2: paddr=00019944 vaddr=3ffb0000 size=022a0h (  8864) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=0001bbec vaddr=40080000 size=0442ch ( 17452) load[0m
+[0;32mI (120) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=13ddch ( 81372) map[0m
+[0;32mI (149) esp_image: segment 5: paddr=00033e04 vaddr=4008442c size=0a068h ( 41064) load[0m
+[0;32mI (172) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (172) boot: Disabling RNG early entropy source...[0m
+[0;32mI (182) cpu_start: Multicore app[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (191) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (191) app_init: Application information:[0m
+[0;32mI (191) app_init: Project name:     Test_MPPT[0m
+[0;32mI (195) app_init: App version:      v5.5-dirty[0m
+[0;32mI (199) app_init: Compile time:     Dec 20 2025 11:39:59[0m
+[0;32mI (204) app_init: ELF file SHA256:  cc26b1547...[0m
+[0;32mI (208) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (212) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (216) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (220) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (224) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (231) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFB2B80 len 0002D480 (181 KiB): DRAM[0m
+[0;32mI (241) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 4008E494 len 00011B6C (70 KiB): IRAM[0m
+[0;33mW (258) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (267) spi_flash: detected chip: generic[0m
+[0;32mI (271) spi_flash: flash io: dio[0m
+[0;33mW (274) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (284) main_task: Started on CPU0[0m
+[0;32mI (294) main_task: Calling app_main()[0m
+[0;32mI (294) MPPT: V=7.39V I=0.008A P=0.061W Duty=0.51[0m
+[0;32mI (1294) MPPT: V=7.08V I=0.070A P=0.492W Duty=0.50[0m
+[0;32mI (2294) MPPT: V=7.08V I=0.069A P=0.491W Duty=0.51[0m
+[0;32mI (3294) MPPT: V=7.06V I=0.072A P=0.510W Duty=0.50[0m
+[0;32mI (4294) MPPT: V=7.07V I=0.072A P=0.506W Duty=0.49[0m
+[0;32mI (5294) MPPT: V=7.08V I=0.071A P=0.502W Duty=0.48[0m
+[0;32mI (6294) MPPT: V=7.09V I=0.070A P=0.494W Duty=0.47[0m
+[0;32mI (7294) MPPT: V=7.09V I=0.068A P=0.479W Duty=0.46[0m
+[0;32mI (8294) MPPT: V=7.10V I=0.066A P=0.468W Duty=0.45[0m
+[0;32mI (9294) MPPT: V=7.12V I=0.063A P=0.447W Duty=0.44[0m
+W�Wk���� v3.0
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=098f4h ( 39156) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001991c vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (102) esp_image: segment 2: paddr=00019944 vaddr=3ffb0000 size=022a0h (  8864) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=0001bbec vaddr=40080000 size=0442ch ( 17452) load[0m
+[0;32mI (120) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=13ddch ( 81372) map[0m
+[0;32mI (149) esp_image: segment 5: paddr=00033e04 vaddr=4008442c size=0a068h ( 41064) load[0m
+[0;32mI (172) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (172) boot: Disabling RNG early entropy source...[0m
+[0;32mI (182) cpu_start: Multicore app[0m
+[0;32mI (190) cpu_start: Pro cpu start user code[0m
+[0;32mI (191) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (191) app_init: Application information:[0m
+[0;32mI (191) app_init: Project name:     Test_MPPT[0m
+[0;32mI (195) app_init: App version:      v5.5-dirty[0m
+[0;32mI (199) app_init: Compile time:     Dec 20 2025 11:39:59[0m
+[0;32mI (204) app_init: ELF file SHA256:  cc26b1547...[0m
+[0;32mI (208) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (212) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (216) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (220) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (224) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (231) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (235) heap_init: At 3FFB2B80 len 0002D480 (181 KiB): DRAM[0m
+[0;32mI (241) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (246) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (252) heap_init: At 4008E494 len 00011B6C (70 KiB): IRAM[0m
+[0;33mW (258) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (267) spi_flash: detected chip: generic[0m
+[0;32mI (271) spi_flash: flash io: dio[0m
+[0;33mW (274) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (284) main_task: Started on CPU0[0m
+[0;32mI (294) main_task: Calling app_main()[0m
+[0;32mI (294) MPPT: V=7.40V I=0.207A P=1.535W Duty=0.51[0m
+[0;32mI (1294) MPPT: V=5.62V I=0.180A P=1.012W Duty=0.52[0m
+[0;32mI (2294) MPPT: V=5.85V I=0.176A P=1.029W Duty=0.53[0m
+[0;32mI (3294) MPPT: V=5.75V I=0.178A P=1.026W Duty=0.54[0m
+[0;32mI (4294) MPPT: V=5.81V I=0.179A P=1.042W Duty=0.55[0m
+[0;32mI (5294) MPPT: V=5.54V I=0.184A P=1.018W Duty=0.56[0m
+[0;32mI (6294) MPPT: V=5.50V I=0.185A P=1.017W Duty=0.57[0m
+[0;32mI (7294) MPPT: V=5.21V I=0.189A P=0.982W Duty=0.58[0m
+[0;32mI (8294) MPPT: V=4.69V I=0.192A P=0.902W Duty=0.59[0m
+[0;32mI (9294) MPPT: V=2.49V I=0.180A P=0.449W Duty=0.60[0m
+[0;32mI (10294) MPPT: V=0.00V I=0.163A P=0.000W Duty=0.61[0m
+[0;32mI (11294) MPPT: V=0.00V I=0.168A P=0.000W Duty=0.62[0m
+[0;32mI (12294) MPPT: V=0.00V I=0.167A P=0.000W Duty=0.63[0m
+[0;32mI (13294) MPPT: V=0.00V I=0.157A P=0.000W Duty=0.64[0m
+[0;32mI (14294) MPPT: V=0.00V I=0.158A P=0.000W Duty=0.65[0m
+[0;32mI (15294) MPPT: V=0.00V I=0.159A P=0.000W Duty=0.66[0m
+[0;32mI (16294) MPPT: V=0.00V I=0.160A P=0.000W Duty=0.67[0m
+[0;32mI (17294) MPPT: V=0.00V I=0.156A P=0.000W Duty=0.68[0m
+[0;32mI (18294) MPPT: V=0.00V I=0.149A P=0.000W Duty=0.69[0m
+[0;32mI (19294) MPPT: V=0.00V I=0.148A P=0.000W Duty=0.70[0m
+[0;32mI (20294) MPPT: V=0.00V I=0.145A P=0.000W Duty=0.71[0m
+[0;32mI (21294) MPPT: V=0.00V I=0.143A P=0.000W Duty=0.72[0m
+[0;32mI (22294) MPPT: V=0.00V I=0.144A P=0.000W Duty=0.73[0m
+[0;32mI (23294) MPPT: V=0.00V I=0.142A P=0.000W Duty=0.74[0m
+[0;32mI (24294) MPPT: V=0.00V I=0.141A P=0.000W Duty=0.75[0m
+[0;32mI (25294) MPPT: V=0.00V I=0.139A P=0.000W Duty=0.76[0m
+[0;32mI (26294) MPPT: V=0.00V I=0.135A P=0.000W Duty=0.77[0m
+[0;32mI (27294) MPPT: V=0.00V I=0.133A P=0.000W Duty=0.78[0m
+[0;32mI (28294) MPPT: V=0.00V I=0.136A P=0.000W Duty=0.79[0m
+[0;32mI (29294) MPPT: V=0.00V I=0.132A P=0.000W Duty=0.80[0m
+[0;32mI (30294) MPPT: V=0.00V I=0.129A P=0.000W Duty=0.81[0m
+[0;32mI (31294) MPPT: V=0.00V I=0.129A P=0.000W Duty=0.82[0m
+[0;32mI (32294) MPPT: V=0.00V I=0.127A P=0.000W Duty=0.83[0m
+[0;32mI (33294) MPPT: V=0.00V I=0.126A P=0.000W Duty=0.84[0m
+[0;32mI (34294) MPPT: V=0.00V I=0.121A P=0.000W Duty=0.85[0m
+[0;32mI (35294) MPPT: V=0.00V I=0.121A P=0.000W Duty=0.86[0m
+[0;32mI (36294) MPPT: V=0.00V I=0.117A P=0.000W Duty=0.87[0m
+[0;32mI (37294) MPPT: V=0.00V I=0.117A P=0.000W Duty=0.88[0m
+[0;32mI (38294) MPPT: V=0.00V I=0.124A P=0.000W Duty=0.89[0m
+[0;32mI (39294) MPPT: V=0.00V I=0.120A P=0.000W Duty=0.90[0m
+[0;32mI (40294) MPPT: V=0.00V I=0.117A P=0.000W Duty=0.91[0m
+[0;32mI (41294) MPPT: V=0.00V I=0.117A P=0.000W Duty=0.92[0m
+[0;32mI (42294) MPPT: V=0.00V I=0.124A P=0.000W Duty=0.93[0m
+[0;32mI (43294) MPPT: V=0.00V I=0.133A P=0.000W Duty=0.94[0m
+[0;32mI (44294) MPPT: V=0.00V I=0.144A P=0.000W Duty=0.95[0m
+[0;32mI (45294) MPPT: V=0.00V I=0.157A P=0.000W Duty=0.96[0m
+[0;32mI (46294) MPPT: V=0.00V I=0.172A P=0.000W Duty=0.97[0m
+[0;32mI (47294) MPPT: V=0.00V I=0.191A P=0.000W Duty=0.98[0m
+[0;32mI (48294) MPPT: V=0.32V I=0.213A P=0.067W Duty=0.99[0m
+[0;32mI (49294) MPPT: V=6.24V I=0.167A P=1.040W Duty=1.00[0m
+[0;32mI (50294) MPPT: V=6.19V I=0.170A P=1.051W Duty=0.99[0m
+[0;32mI (51294) MPPT: V=6.16V I=0.171A P=1.053W Duty=0.98[0m
+[0;32mI (52294) MPPT: V=6.13V I=0.173A P=1.063W Duty=0.97[0m
+[0;32mI (53294) MPPT: V=6.12V I=0.174A P=1.062W Duty=0.98[0m
+[0;32mI (54294) MPPT: V=6.07V I=0.176A P=1.069W Duty=0.97[0m
+[0;32mI (55294) MPPT: V=6.04V I=0.177A P=1.072W Duty=0.96[0m
+[0;32mI (56294) MPPT: V=6.01V I=0.179A P=1.076W Duty=0.95[0m
+[0;32mI (57294) MPPT: V=6.00V I=0.179A P=1.077W Duty=0.94[0m
+[0;32mI (58294) MPPT: V=6.07V I=0.176A P=1.069W Duty=0.93[0m
+[0;32mI (59294) MPPT: V=6.11V I=0.175A P=1.066W Duty=0.92[0m
+[0;32mI (60294) MPPT: V=6.10V I=0.174A P=1.064W Duty=0.93[0m
+[0;32mI (61294) MPPT: V=6.03V I=0.178A P=1.071W Duty=0.92[0m
+[0;32mI (62294) MPPT: V=6.03V I=0.178A P=1.072W Duty=0.93[0m
+[0;32mI (63294) MPPT: V=5.96V I=0.181A P=1.078W Duty=0.92[0m
+[0;32mI (64294) MPPT: V=0.01V I=0.000A P=0.000W Duty=0.93[0m
+[0;32mI (65294) MPPT: V=0.01V I=-0.001A P=-0.000W Duty=0.92[0m
+[0;32mI (66294) MPPT: V=0.01V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (67294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (68294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.91[0m
+[0;32mI (69294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (70294) MPPT: V=0.01V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (71294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (72294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (73294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (74294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (75294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (76294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (77294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (78294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (79294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (80294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.91[0m
+[0;32mI (81294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.90[0m
+[0;32mI (82294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (83294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (84294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.89[0m
+[0;32mI (85294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (86294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.91[0m
+[0;32mI (87294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.90[0m
+[0;32mI (88294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.89[0m
+[0;32mI (89294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (90294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (91294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (92294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (93294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (94294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (95294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.92[0m
+[0;32mI (96294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.91[0m
+[0;32mI (97294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (98294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.91[0m
+[0;32mI (99294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (100294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (101294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (102294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (103294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (104294) MPPT: V=0.01V I=-0.001A P=-0.000W Duty=0.91[0m
+[0;32mI (105294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (106294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (107294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (108294) MPPT: V=0.01V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (109294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (110294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (111294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (112294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (113294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (114294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (115294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (116294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (117294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (118294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (119294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (120294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (121294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (122294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (123294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.92[0m
+[0;32mI (124294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (125294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.92[0m
+[0;32mI (126294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (127294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (128294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.93[0m
+[0;32mI (129294) MPPT: V=0.01V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (130294) MPPT: V=0.01V I=-0.000A P=-0.000W Duty=0.93[0m
+[0;32mI (131294) MPPT: V=0.01V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (132294) MPPT: V=0.01V I=-0.001A P=-0.000W Duty=0.93[0m
+[0;32mI (133294) MPPT: V=0.01V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (134294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.93[0m
+[0;32mI (135294) MPPT: V=0.01V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (136294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.91[0m
+[0;32mI (137294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.90[0m
+[0;32mI (138294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.91[0m
+[0;32mI (139294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (140294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (141294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (142294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.89[0m
+[0;32mI (143294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.90[0m
+[0;32mI (144294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (145294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (146294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.91[0m
+[0;32mI (147294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (148294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (149294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (150294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (151294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.90[0m
+[0;32mI (152294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (153294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (154294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.91[0m
+[0;32mI (155294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (156294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.91[0m
+[0;32mI (157294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (158294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (159294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (160294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (161294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (162294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (163294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (164294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (165294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (166294) MPPT: V=0.01V I=-0.001A P=-0.000W Duty=0.91[0m
+[0;32mI (167294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (168294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (169294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (170294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.89[0m
+[0;32mI (171294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (172294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (173294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (174294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.89[0m
+[0;32mI (175294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (176294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (177294) MPPT: V=0.00V I=0.000A P=0.000W Duty=0.92[0m
+[0;32mI (178294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (179294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (180294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (181294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.92[0m
+[0;32mI (182294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (183294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (184294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (185294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.92[0m
+[0;32mI (186294) MPPT: V=0.01V I=-0.001A P=-0.000W Duty=0.91[0m
+[0;32mI (187294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.90[0m
+[0;32mI (188294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.91[0m
+[0;32mI (189294) MPPT: V=0.00V I=-0.000A P=-0.000W Duty=0.92[0m
+[0;32mI (190294) MPPT: V=0.00V I=-0.001A P=-0.000W Duty=0.91[0m
+[0;32mI (191294) MPPT: V=6.20V I=0.116A P=0.720W Duty=0.92[0m
+[0;32mI (192294) MPPT: V=6.16V I=0.118A P=0.729W Duty=0.91[0m
+[0;32mI (193294) MPPT: V=6.14V I=0.119A P=0.729W Duty=0.90[0m
+[0;32mI (194294) MPPT: V=6.14V I=0.119A P=0.730W Duty=0.89[0m
+[0;32mI (195294) MPPT: V=6.14V I=0.118A P=0.725W Duty=0.88[0m
+[0;32mI (196294) MPPT: V=6.15V I=0.117A P=0.722W Duty=0.87[0m
+[0;32mI (197294) MPPT: V=6.16V I=0.117A P=0.720W Duty=0.86[0m
+[0;32mI (198294) MPPT: V=6.17V I=0.116A P=0.712W Duty=0.85[0m
+[0;32mI (199294) MPPT: V=6.19V I=0.114A P=0.707W Duty=0.84[0m
+[0;32mI (200294) MPPT: V=6.20V I=0.113A P=0.701W Duty=0.83[0m
+[0;32mI (201294) MPPT: V=6.23V I=0.112A P=0.695W Duty=0.82[0m
+[0;32mI (202294) MPPT: V=6.26V I=0.110A P=0.686W Duty=0.81[0m
+[0;32mI (203294) MPPT: V=6.28V I=0.109A P=0.682W Duty=0.80[0m
+[0;32mI (204294) MPPT: V=0.00V I=0.082A P=0.000W Duty=0.81[0m
+[0;32mI (205294) MPPT: V=0.00V I=0.091A P=0.000W Duty=0.82[0m
+[0;32mI (206294) MPPT: V=0.00V I=0.079A P=0.000W Duty=0.83[0m
+[0;32mI (207294) MPPT: V=0.00V I=0.091A P=0.000W Duty=0.84[0m
+[0;32mI (208294) MPPT: V=0.00V I=0.079A P=0.000W Duty=0.85[0m
+[0;32mI (209294) MPPT: V=0.00V I=0.084A P=0.000W Duty=0.86[0m
+[0;32mI (210294) MPPT: V=0.00V I=0.080A P=0.000W Duty=0.87[0m
+[0;32mI (211294) MPPT: V=0.00V I=0.079A P=0.000W Duty=0.88[0m
+[0;32mI (212294) MPPT: V=0.00V I=0.080A P=0.000W Duty=0.89[0m
+[0;32mI (213294) MPPT: V=0.00V I=0.077A P=0.000W Duty=0.90[0m
+[0;32mI (214294) MPPT: V=0.00V I=0.081A P=0.000W Duty=0.91[0m
+[0;32mI (215294) MPPT: V=0.00V I=0.090A P=0.000W Duty=0.92[0m
+[0;32mI (216294) MPPT: V=0.00V I=0.089A P=0.000W Duty=0.93[0m
+[0;32mI (217294) MPPT: V=0.00V I=0.091A P=0.000W Duty=0.94[0m
+[0;32mI (218294) MPPT: V=5.70V I=0.128A P=0.732W Duty=0.95[0m
+[0;32mI (219294) MPPT: V=5.53V I=0.132A P=0.731W Duty=0.96[0m
+[0;32mI (220294) MPPT: V=5.46V I=0.133A P=0.728W Duty=0.97[0m
+[0;32mI (221294) MPPT: V=5.39V I=0.135A P=0.726W Duty=0.98[0m
+[0;32mI (222294) MPPT: V=5.31V I=0.136A P=0.720W Duty=0.99[0m
+[0;32mI (223294) MPPT: V=5.22V I=0.137A P=0.715W Duty=1.00[0m
+[0;32mI (224294) MPPT: V=5.15V I=0.138A P=0.710W Duty=1.00[0m
+[0;32mI (225294) MPPT: V=5.06V I=0.139A P=0.701W Duty=1.00[0m
+[0;32mI (226294) MPPT: V=4.96V I=0.139A P=0.690W Duty=1.00[0m
+[0;32mI (227294) MPPT: V=4.87V I=0.140A P=0.680W Duty=1.00[0m
+[0;32mI (228294) MPPT: V=4.78V I=0.140A P=0.669W Duty=1.00[0m
+[0;32mI (229294) MPPT: V=4.65V I=0.140A P=0.651W Duty=1.00[0m
+[0;32mI (230294) MPPT: V=4.45V I=0.140A P=0.623W Duty=1.00[0m
+[0;32mI (231294) MPPT: V=4.22V I=0.140A P=0.590W Duty=1.00[0m
+[0;32mI (232294) MPPT: V=3.82V I=0.140A P=0.533W Duty=1.00[0m
+[0;32mI (233294) MPPT: V=3.62V I=0.139A P=0.504W Duty=1.00[0m
+[0;32mI (234294) MPPT: V=3.00V I=0.139A P=0.418W Duty=1.00[0m
+[0;32mI (235294) MPPT: V=2.98V I=0.139A P=0.414W Duty=1.00[0m
+[0;32mI (236294) MPPT: V=2.91V I=0.139A P=0.404W Duty=1.00[0m
+[0;32mI (237294) MPPT: V=2.72V I=0.138A P=0.376W Duty=1.00[0m
+[0;32mI (238294) MPPT: V=2.59V I=0.139A P=0.359W Duty=1.00[0m
+[0;32mI (239294) MPPT: V=2.45V I=0.138A P=0.338W Duty=1.00[0m
+[0;32mI (240294) MPPT: V=2.82V I=0.138A P=0.388W Duty=1.00[0m
+[0;32mI (241294) MPPT: V=2.25V I=0.138A P=0.311W Duty=1.00[0m
+[0;32mI (242294) MPPT: V=2.14V I=0.138A P=0.294W Duty=1.00[0m
+[0;32mI (243294) MPPT: V=2.08V I=0.138A P=0.285W Duty=1.00[0m
+[0;32mI (244294) MPPT: V=2.11V I=0.137A P=0.290W Duty=1.00[0m
+[0;32mI (245294) MPPT: V=2.02V I=0.137A P=0.277W Duty=1.00[0m
+[0;32mI (246294) MPPT: V=1.96V I=0.137A P=0.269W Duty=1.00[0m
+[0;32mI (247294) MPPT: V=1.89V I=0.137A P=0.259W Duty=1.00[0m
+[0;32mI (248294) MPPT: V=1.82V I=0.136A P=0.249W Duty=1.00[0m
+[0;32mI (249294) MPPT: V=1.80V I=0.136A P=0.246W Duty=1.00[0m
+[0;32mI (250294) MPPT: V=1.77V I=0.136A P=0.240W Duty=1.00[0m
+[0;32mI (251294) MPPT: V=1.70V I=0.136A P=0.231W Duty=1.00[0m
+[0;32mI (252294) MPPT: V=1.62V I=0.136A P=0.221W Duty=1.00[0m
+[0;32mI (253294) MPPT: V=1.58V I=0.136A P=0.214W Duty=1.00[0m
+[0;32mI (254294) MPPT: V=1.53V I=0.135A P=0.207W Duty=1.00[0m
+[0;32mI (255294) MPPT: V=1.50V I=0.135A P=0.203W Duty=1.00[0m
+[0;32mI (256294) MPPT: V=1.50V I=0.135A P=0.203W Duty=1.00[0m
+[0;32mI (257294) MPPT: V=1.46V I=0.135A P=0.198W Duty=1.00[0m
+[0;32mI (258294) MPPT: V=1.43V I=0.135A P=0.193W Duty=1.00[0m
+[0;32mI (259294) MPPT: V=1.41V I=0.135A P=0.190W Duty=1.00[0m
+[0;32mI (260294) MPPT: V=1.38V I=0.135A P=0.185W Duty=1.00[0m
+[0;32mI (261294) MPPT: V=1.36V I=0.135A P=0.183W Duty=1.00[0m
+[0;32mI (262294) MPPT: V=1.34V I=0.135A P=0.180W Duty=1.00[0m
+[0;32mI (263294) MPPT: V=1.33V I=0.134A P=0.179W Duty=1.00[0m
+[0;32mI (264294) MPPT: V=1.32V I=0.134A P=0.177W Duty=1.00[0m
+[0;32mI (265294) MPPT: V=1.34V I=0.134A P=0.180W Duty=1.00[0m
+[0;32mI (266294) MPPT: V=1.31V I=0.134A P=0.176W Duty=1.00[0m
+[0;32mI (267294) MPPT: V=1.28V I=0.134A P=0.172W Duty=1.00[0m
+[0;32mI (268294) MPPT: V=1.27V I=0.134A P=0.170W Duty=1.00[0m
+[0;32mI (269294) MPPT: V=1.26V I=0.134A P=0.169W Duty=1.00[0m
+[0;32mI (270294) MPPT: V=1.26V I=0.133A P=0.168W Duty=1.00[0m
+[0;32mI (271294) MPPT: V=1.26V I=0.134A P=0.169W Duty=1.00[0m
+[0;32mI (272294) MPPT: V=1.26V I=0.133A P=0.168W Duty=1.00[0m
+[0;32mI (273294) MPPT: V=1.25V I=0.133A P=0.167W Duty=1.00[0m
+[0;32mI (274294) MPPT: V=1.24V I=0.133A P=0.166W Duty=1.00[0m
+[0;32mI (275294) MPPT: V=1.23V I=0.133A P=0.164W Duty=1.00[0m
+[0;32mI (276294) MPPT: V=1.22V I=0.133A P=0.163W Duty=1.00[0m
+[0;32mI (277294) MPPT: V=1.22V I=0.133A P=0.162W Duty=1.00[0m
+[0;32mI (278294) MPPT: V=1.21V I=0.133A P=0.160W Duty=1.00[0m
+[0;32mI (279294) MPPT: V=1.20V I=0.133A P=0.159W Duty=1.00[0m
+[0;32mI (280294) MPPT: V=1.25V I=0.133A P=0.165W Duty=1.00[0m
+[0;32mI (281294) MPPT: V=1.21V I=0.132A P=0.160W Duty=1.00[0m
+[0;32mI (282294) MPPT: V=1.19V I=0.132A P=0.157W Duty=1.00[0m
+[0;32mI (283294) MPPT: V=1.16V I=0.132A P=0.153W Duty=1.00[0m
+[0;32mI (284294) MPPT: V=1.13V I=0.132A P=0.149W Duty=1.00[0m
+[0;32mI (285294) MPPT: V=1.18V I=0.132A P=0.156W Duty=1.00[0m
+[0;32mI (286294) MPPT: V=1.15V I=0.132A P=0.151W Duty=1.00[0m
+[0;32mI (287294) MPPT: V=1.12V I=0.132A P=0.147W Duty=1.00[0m
+[0;32mI (288294) MPPT: V=1.10V I=0.131A P=0.144W Duty=1.00[0m
+[0;32mI (289294) MPPT: V=1.08V I=0.131A P=0.141W Duty=1.00[0m
+[0;32mI (290294) MPPT: V=1.10V I=0.131A P=0.145W Duty=1.00[0m
+[0;32mI (291294) MPPT: V=1.15V I=0.131A P=0.150W Duty=1.00[0m
+[0;32mI (292294) MPPT: V=1.03V I=0.131A P=0.135W Duty=1.00[0m
+[0;32mI (293294) MPPT: V=1.00V I=0.131A P=0.130W Duty=1.00[0m
+[0;32mI (294294) MPPT: V=0.99V I=0.131A P=0.130W Duty=1.00[0m
+[0;32mI (295294) MPPT: V=0.96V I=0.130A P=0.126W Duty=1.00[0m
+[0;32mI (296294) MPPT: V=0.91V I=0.130A P=0.119W Duty=1.00[0m
+[0;32mI (297294) MPPT: V=0.89V I=0.130A P=0.116W Duty=1.00[0m
+[0;32mI (298294) MPPT: V=0.88V I=0.130A P=0.114W Duty=1.00[0m
+[0;32mI (299294) MPPT: V=0.94V I=0.130A P=0.123W Duty=1.00[0m
+[0;32mI (300294) MPPT: V=0.92V I=0.129A P=0.119W Duty=1.00[0m
+[0;32mI (301294) MPPT: V=0.92V I=0.130A P=0.119W Duty=0.99[0m
+[0;32mI (302294) MPPT: V=1.23V I=0.129A P=0.159W Duty=1.00[0m
+[0;32mI (303294) MPPT: V=1.05V I=0.130A P=0.136W Duty=1.00[0m
+[0;32mI (304294) MPPT: V=1.06V I=0.129A P=0.137W Duty=1.00[0m
+[0;32mI (305294) MPPT: V=1.04V I=0.129A P=0.134W Duty=1.00[0m
+[0;32mI (306294) MPPT: V=1.02V I=0.129A P=0.132W Duty=1.00[0m
+[0;32mI (307294) MPPT: V=1.01V I=0.129A P=0.130W Duty=1.00[0m
+[0;32mI (308294) MPPT: V=0.99V I=0.129A P=0.128W Duty=1.00[0m
+[0;32mI (309294) MPPT: V=0.98V I=0.128A P=0.126W Duty=1.00[0m
+[0;32mI (310294) MPPT: V=0.96V I=0.128A P=0.124W Duty=1.00[0m
+[0;32mI (311294) MPPT: V=0.98V I=0.128A P=0.126W Duty=1.00[0m
+[0;32mI (312294) MPPT: V=0.95V I=0.128A P=0.122W Duty=1.00[0m
+[0;32mI (313294) MPPT: V=0.93V I=0.128A P=0.119W Duty=1.00[0m
+[0;32mI (314294) MPPT: V=0.90V I=0.128A P=0.116W Duty=1.00[0m
+[0;32mI (315294) MPPT: V=0.89V I=0.128A P=0.113W Duty=1.00[0m
+[0;32mI (316294) MPPT: V=0.87V I=0.128A P=0.112W Duty=1.00[0m
+[0;32mI (317294) MPPT: V=0.86V I=0.127A P=0.110W Duty=1.00[0m
+[0;32mI (318294) MPPT: V=0.86V I=0.128A P=0.109W Duty=1.00[0m
+[0;32mI (319294) MPPT: V=0.86V I=0.128A P=0.110W Duty=1.00[0m
+[0;32mI (320294) MPPT: V=0.86V I=0.127A P=0.109W Duty=1.00[0m
+[0;32mI (321294) MPPT: V=0.85V I=0.127A P=0.108W Duty=1.00[0m
+[0;32mI (322294) MPPT: V=0.85V I=0.127A P=0.108W Duty=1.00[0m
+[0;32mI (323294) MPPT: V=0.85V I=0.127A P=0.108W Duty=1.00[0m
+[0;32mI (324294) MPPT: V=0.85V I=0.127A P=0.108W Duty=0.99[0m
+[0;32mI (325294) MPPT: V=0.99V I=0.127A P=0.126W Duty=1.00[0m
+[0;32mI (326294) MPPT: V=0.85V I=0.127A P=0.108W Duty=1.00[0m
+[0;32mI (327294) MPPT: V=0.86V I=0.127A P=0.109W Duty=1.00[0m
+[0;32mI (328294) MPPT: V=0.87V I=0.127A P=0.110W Duty=1.00[0m
+[0;32mI (329294) MPPT: V=0.87V I=0.127A P=0.111W Duty=1.00[0m
+[0;32mI (330294) MPPT: V=0.87V I=0.127A P=0.110W Duty=1.00[0m
+[0;32mI (331294) MPPT: V=0.17V I=0.127A P=0.021W Duty=1.00[0m
+[0;32mI (332294) MPPT: V=0.17V I=0.127A P=0.021W Duty=1.00[0m
+[0;32mI (333294) MPPT: V=0.17V I=0.127A P=0.021W Duty=1.00[0m
+[0;32mI (334294) MPPT: V=0.17V I=0.127A P=0.021W Duty=1.00[0m
+[0;32mI (335294) MPPT: V=0.17V I=0.127A P=0.021W Duty=1.00[0m
+[0;32mI (336294) MPPT: V=0.17V I=0.127A P=0.021W Duty=0.99[0m
+[0;32mI (337294) MPPT: V=0.18V I=0.126A P=0.023W Duty=1.00[0m
+[0;32mI (338294) MPPT: V=0.17V I=0.127A P=0.021W Duty=1.00[0m
+[0;32mI (339294) MPPT: V=0.17V I=0.127A P=0.021W Duty=1.00[0m
+[0;32mI (340294) MPPT: V=0.17V I=0.126A P=0.021W Duty=1.00[0m
+[0;32mI (341294) MPPT: V=0.17V I=0.127A P=0.021W Duty=0.99[0m
+[0;32mI (342294) MPPT: V=0.18V I=0.127A P=0.023W Duty=1.00[0m
+[0;32mI (343294) MPPT: V=0.18V I=0.127A P=0.023W Duty=0.99[0m
+[0;32mI (344294) MPPT: V=1.27V I=0.126A P=0.160W Duty=1.00[0m
+[0;32mI (345294) MPPT: V=1.20V I=0.126A P=0.151W Duty=1.00[0m
+[0;32mI (346294) MPPT: V=1.23V I=0.126A P=0.155W Duty=1.00[0m
+[0;32mI (347294) MPPT: V=1.24V I=0.126A P=0.156W Duty=1.00[0m
+[0;32mI (348294) MPPT: V=1.24V I=0.126A P=0.156W Duty=0.99[0m
+[0;32mI (349294) MPPT: V=1.41V I=0.126A P=0.178W Duty=1.00[0m
+[0;32mI (350294) MPPT: V=1.23V I=0.126A P=0.155W Duty=1.00[0m
+[0;32mI (351294) MPPT: V=1.22V I=0.126A P=0.155W Duty=1.00[0m
+[0;32mI (352294) MPPT: V=1.23V I=0.126A P=0.155W Duty=1.00[0m
+[0;32mI (353294) MPPT: V=1.23V I=0.126A P=0.156W Duty=1.00[0m
+[0;32mI (354294) MPPT: V=1.24V I=0.126A P=0.156W Duty=1.00[0m
+[0;32mI (355294) MPPT: V=1.24V I=0.126A P=0.157W Duty=1.00[0m
+[0;32mI (356294) MPPT: V=1.24V I=0.127A P=0.157W Duty=0.99[0m
+[0;32mI (357294) MPPT: V=1.42V I=0.126A P=0.179W Duty=1.00[0m
+[0;32mI (358294) MPPT: V=1.24V I=0.126A P=0.157W Duty=1.00[0m
+[0;32mI (359294) MPPT: V=1.25V I=0.126A P=0.158W Duty=1.00[0m
+[0;32mI (360294) MPPT: V=1.26V I=0.126A P=0.159W Duty=1.00[0m
+[0;32mI (361294) MPPT: V=1.27V I=0.126A P=0.160W Duty=1.00[0m
+[0;32mI (362294) MPPT: V=1.28V I=0.126A P=0.162W Duty=1.00[0m
+[0;32mI (363294) MPPT: V=1.29V I=0.127A P=0.164W Duty=1.00[0m
+[0;32mI (364294) MPPT: V=1.30V I=0.126A P=0.165W Duty=1.00[0m
+[0;32mI (365294) MPPT: V=1.32V I=0.127A P=0.167W Duty=1.00[0m
+[0;32mI (366294) MPPT: V=1.33V I=0.127A P=0.169W Duty=1.00[0m
+[0;32mI (367294) MPPT: V=1.35V I=0.127A P=0.171W Duty=1.00[0m
+[0;32mI (368294) MPPT: V=1.38V I=0.127A P=0.175W Duty=1.00[0m
+[0;32mI (369294) MPPT: V=1.43V I=0.127A P=0.182W Duty=1.00[0m
+[0;32mI (370294) MPPT: V=1.40V I=0.127A P=0.177W Duty=1.00[0m
+[0;32mI (371294) MPPT: V=1.43V I=0.127A P=0.181W Duty=1.00[0m
+[0;32mI (372294) MPPT: V=1.43V I=0.127A P=0.182W Duty=1.00[0m
+[0;32mI (373294) MPPT: V=1.45V I=0.127A P=0.184W Duty=1.00[0m
+[0;32mI (374294) MPPT: V=1.48V I=0.127A P=0.188W Duty=1.00[0m
+[0;32mI (375294) MPPT: V=1.58V I=0.127A P=0.201W Duty=1.00[0m
+[0;32mI (376294) MPPT: V=1.58V I=0.127A P=0.201W Duty=1.00[0m
+[0;32mI (377294) MPPT: V=1.58V I=0.128A P=0.202W Duty=1.00[0m
+[0;32mI (378294) MPPT: V=1.60V I=0.128A P=0.205W Duty=1.00[0m
+[0;32mI (379294) MPPT: V=1.68V I=0.128A P=0.214W Duty=1.00[0m

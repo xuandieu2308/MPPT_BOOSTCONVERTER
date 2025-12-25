@@ -1,0 +1,2 @@
+source E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/build/bootloader/gdbinit/symbols
+source E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/build/bootloader/gdbinit/connect

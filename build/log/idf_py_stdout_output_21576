@@ -1,0 +1,54 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=1 E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\MPPT_DONE
+-- IDF_TARGET is not set, guessed 'esp32' from sdkconfig 'E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/sdkconfig'
+-- Found Git: E:/ESP32_NEWBIE/Espressif/tools/idf-git/2.44.0/cmd/git.exe (found version "2.44.0.windows.1")
+-- Minimal build - ON
+-- ccache will be used for faster recompilation
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: E:/ESP32_NEWBIE/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc.exe
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: E:/ESP32_NEWBIE/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: E:/ESP32_NEWBIE/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building ESP-IDF components for target esp32
+NOTICE: 
+Following dependencies have new versions available:
+Dependency "espressif/led_strip": "3.0.1~1" -> "3.0.2"
+Consider running "idf.py update-dependencies" to update your lock file.
+NOTICE: Processing 2 dependencies:
+NOTICE: [1/2] espressif/led_strip (3.0.1~1)
+NOTICE: [2/2] idf (5.5.0)
+-- Project sdkconfig file E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/sdkconfig
+Loading defaults file E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/sdkconfig.defaults...
+Loading defaults file E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/sdkconfig.defaults.esp32...
+-- Compiler supported targets: xtensa-esp-elf
+-- Found Python3: E:/ESP32_NEWBIE/Espressif/python_env/idf5.5_py3.11_env/Scripts/python.exe (found version "3.11.2") found components: Interpreter
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS - Success
+-- USING O3
+-- App "Test_MPPT" version: v5.5-dirty
+-- Adding linker script E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_rom/esp32/ld/esp32.rom.libc-funcs.ld
+-- Adding linker script E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_rom/esp32/ld/esp32.rom.newlib-reent-funcs.ld
+-- Adding linker script E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_update bootloader bootloader_support cxx efuse esp_app_format esp_bootloader_format esp_common esp_driver_bitscrambler esp_driver_gpio esp_driver_rmt esp_driver_spi esp_hw_support esp_mm esp_partition esp_pm esp_rom esp_security esp_system esp_timer espressif__led_strip esptool_py freertos hal heap log main mbedtls newlib partition_table pthread soc spi_flash xtensa
+-- Component paths: E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/app_update E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/bootloader E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/bootloader_support E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/cxx E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/efuse E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_app_format E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_bootloader_format E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_common E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_bitscrambler E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_gpio E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_rmt E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_driver_spi E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_hw_support E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_mm E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_partition E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_pm E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_rom E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_security E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_system E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esp_timer E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/managed_components/espressif__led_strip E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/esptool_py E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/freertos E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/hal E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/heap E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/log E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/main E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/mbedtls E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/newlib E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/partition_table E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/pthread E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/soc E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/spi_flash E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/components/xtensa
+-- Configuring done (12.1s)
+-- Generating done (0.4s)
+-- Build files have been written to: E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/MPPT_DONE/build
